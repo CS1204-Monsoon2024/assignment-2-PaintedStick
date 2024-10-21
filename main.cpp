@@ -132,25 +132,19 @@ public:
 };
 
 int main() {
-    int initialSize = 7; 
-    HashTable ht(initialSize);
+ HashTable ht(5); // Initial size of the table is 5 (next prime size is chosen)
 
-    // Example test case
     ht.insert(1);
-    ht.printTable();
-    ht.insert(6);
-    ht.printTable();
-    ht.insert(15);
-    ht.printTable(); 
-    ht.insert(25);
-    ht.printTable();
-    ht.remove(15);
-    ht.printTable();
-    ht.insert(29);  
-    ht.printTable(); 
+    ht.printTable(); // Expected: - 1 - - -
 
-    int find = ht.search(22);
-    cout << "Found at:" << find <<endl;
+    ht.insert(4);
+    ht.printTable(); // Expected: - 1 - 4 -
+
+    ht.remove(10);   // Element not found
+    ht.insert(1);    // Duplicate key insertion is not allowed
+
+    ht.insert(17);
+    ht.printTable(); // Expected: - 1 - 4 17
 
     return 0;
 }
