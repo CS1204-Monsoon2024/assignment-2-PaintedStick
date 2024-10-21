@@ -1,4 +1,3 @@
-#include "HashTable.cpp"
 #include <iostream>
 #include <vector>
 #include <cmath>
@@ -151,7 +150,7 @@ int main() {
     ht.printTable(); 
 
     int find = ht.search(22);
-    std::cout << "Found at:" << find << std::endl;
+    cout << "Found at:" << find <<endl;
 
     return 0;
 }
